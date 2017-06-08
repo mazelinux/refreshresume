@@ -1,6 +1,18 @@
 firefox --version 52.0.2
-make sure you have geckodriver 
-win:get the geckodriver path in you Environment Path
-linux:mv geckodriver in /usr/bin/.....
 
-总体来说已经可以正常使用。可以正常刷新智联招聘以及猎聘网的简历。如有任何问题，欢迎提issues或者给我邮件。
+
+
+make sure you have geckodriver 
+    win:get the geckodriver path in you Environment Path
+    linux:mv geckodriver in /usr/bin/.....
+
+webdriver:
+    chrome:	https://sites.google.com/a/chromium.org/chromedriver/downloads
+    Edge:	https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+    Firefox:	https://github.com/mozilla/geckodriver/releases
+    Safari:	https://webkit.org/blog/6900/webdriver-support-in-safari-10/
+
+for more information:
+    https://pypi.python.org/pypi/selenium
+
+体来说已经可以正常使用。可以正常刷新智联招聘以及猎聘网的简历。如有任何问题，欢迎提issues或者给我邮件。
