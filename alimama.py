@@ -16,11 +16,16 @@ def login():
     driver.find_element_by_id('TPL_username_1').send_keys(uname)
     sleep(3)
     driver.find_element_by_id('TPL_password_1').send_keys(psword)
-    driver.find_element_by_id('TPL_password_1').send_keys(Keys.ENTER)
     sleep(3)
+    driver.find_element_by_id('TPL_password_1').send_keys(Keys.ENTER)
 #driver.find_element_by_id('J_SubmintStatic').click()
 	
+def jump2lianmeng():
+    url = 'https://pub.alimama.com'
+    driver.get(url)
+    
 if __name__ == "__main__":
     uname = "18818204314"
     psword = "406732060chen"
     login()
+    jump2lianmeng()
