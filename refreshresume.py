@@ -48,6 +48,7 @@ def refreshresume_zhilian():
     driver.get(url)
     sleep(5)
     driver.find_element_by_xpath("//a[@id='refresh']").click()
+    sleep(5)
 #   finally:
     driver.close()
 
