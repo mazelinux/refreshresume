@@ -5,6 +5,7 @@ from time import sleep
 import threading
 import random
 import logging
+import time
 
 def refreshresume_liepin():
     driver = webdriver.Firefox()
@@ -63,8 +64,12 @@ def do_refreshresume_firefox():
 if __name__ == "__main__":
     uname = ""
     psword = ""
+    i = 0
     while True:
         print("resume start")
+        print("%d次刷新,刷新时间是"%(i),end='')
+        i = i+1
+        print(time.strftime("%Y-%m-%d  %H:%M:%S", time.localtime() ))
         do_refreshresume_firefox()
         print("resume finish")
 
