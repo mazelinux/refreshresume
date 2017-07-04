@@ -53,17 +53,38 @@ def refreshresume_zhilian():
 #   finally:
     driver.close()
 
+def refreshresume_51job():
+    driver = webdriver.Firefox()
+    url = 'http://www.51job.com'
+    driver.get(url)
+    sleep(1)
+    driver.find_element_by_xpath("//a[contains(text(),'登录')]").click()
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id='loginname' and @type='text']").send_keys(uname)
+    sleep(1)
+    driver.find_element_by_xpath("//input[@id='password' and @name='password']").send_keys(psword)
+    sleep(1)
+    print(driver.find_element_by_xpath("//button[@id='login_btn']").click())
+    driver.find_element_by_xpath("//button[@id='login_btn']").click()
+    sleep(5)
+    driver.get('http://m.51job.com/my/my51job.php')
+    sleep(5)
+    driver.get('http://m.51job.com/resume/myresume.php')
+    sleep(5)
+    print(driver.find_element_by_xpath("//li[@class='l1 bb']").click())
+    sleep(5)
+    driver.close()
+    
 def do_refreshresume_firefox():
     try:
         refreshresume_liepin()
         refreshresume_zhilian()
+        refreshresume_51job()
         sleep(random.randint(200,400))
     except Exception as e:
         logging.exception(e)
 
 if __name__ == "__main__":
-    uname = ""
-    psword = ""
     i = 0
     while True:
         print("resume start")
